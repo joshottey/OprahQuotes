@@ -11,7 +11,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #9b59b6;
+  color: #df5356;
   transition: color 0.3s;
   font-weight: 600;
 }
@@ -21,7 +21,7 @@ a:hover {
 }
 
 header {
-  background: #9b59b6;
+  background: #df5356;
   height: 8em;
 }
 
@@ -38,6 +38,7 @@ main{
 
 #mainPhoto img {
   width: 100%;
+  border-radius: 8px;
 }
 
 #mainQuote {
@@ -62,17 +63,21 @@ main{
 #mainButtons a {
   padding: 0 .25em;
   font-size: 5em;
-  color: #9b59b6;
+  color: #7D1128;
   transition: color 0.3s;
   cursor: pointer;
 }
 
 #mainButtons a:hover {
-  color: rgba(0,0,0,0.75);
+  filter: opacity(0.5);
 }
 
 footer {
-  border-top: 2px solid #9b59b6;
+  border-top: 2px solid #df5356;
   text-align: center;
   font-size: 0.85em;
+}
+
+.shadow {
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,0.3));
 }
