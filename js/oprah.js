@@ -13,6 +13,12 @@ function gotQuotes(json) {
     $("#quote").html(json.oprahQuotes[index]);
     $("#author").html("Oprah Winfrey");
   });
+  
+  // calls tweet() when "Tweet Quote" button is clicked
+  $("#tweetQuote").on("click", function() {
+    let text = shortQuote($("#quote").html());
+    console.log(text);
+    window.open("https://twitter.com/intent/tweet?text=" + text + ";hashtags=OprahQuotes");
 };
 
 /* use truncate string algorithm I wrote for freeCodeCamp
@@ -24,15 +30,4 @@ function shortQuote(quote) {
     quote = quote.slice(0,124);
     return quote + "...";
   } else return quote;
-};
-
-// tweet the quote
-// https://api.twitter.com/1.1/statuses/update.json 
-function tweet() {
-  let text = shortQuote($("#quote").html());
-  console.log(text);
-  window.open("https://twitter.com/intent/tweet?text=" + text + ";hashtags=OprahQuotes");
-  // test in console and log char count
-//   console.log(shortQuote($("#quote").html()));
-//   console.log(("#OprahQuotes"+shortQuote($("#quote").html())).length);
 };
