@@ -3,10 +3,7 @@ $(document).ready(function() {
   $.getJSON("https://raw.githubusercontent.com/dariusk/corpora/master/data/words/oprah_quotes.json", gotQuotes);
 });
 
-// calls tweet() when "Tweet Quote" button is clicked
-$("#tweetQuote").on("click", tweet);
-
-// pull a quote from json file, populate quote/author <p>
+// pull a quote from json file, populate quote/author
 function gotQuotes(json) {
   $("#getQuote").on("click", function() {
     var index = Math.floor(Math.random() * json.oprahQuotes.length);
