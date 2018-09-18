@@ -24,8 +24,8 @@ function gotQuotes(json) {
    OprahQuotes hashtag
 */
 function shortQuote(quote) {
-  if(quote.length>124) {
-    quote = quote.slice(0,140);
+  if(quote.length>250) {
+    quote = quote.slice(0,280);
     return quote + "...";
   } else return quote;
 };
