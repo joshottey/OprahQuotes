@@ -25,7 +25,7 @@ function gotQuotes(json) {
 */
 function shortQuote(quote) {
   if(quote.length>124) {
-    quote = quote.slice(0,124);
+    quote = quote.slice(0,140);
     return quote + "...";
   } else return quote;
 };
