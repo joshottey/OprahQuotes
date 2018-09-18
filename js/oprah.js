@@ -19,6 +19,7 @@ function gotQuotes(json) {
     let text = shortQuote($("#quote").html());
     console.log(text);
     window.open("https://twitter.com/intent/tweet?text=" + text + ";hashtags=OprahQuotes");
+  });
 };
 
 /* use truncate string algorithm I wrote for freeCodeCamp
