@@ -29,9 +29,10 @@ function shortQuote(quote) {
 // tweet the quote
 // https://api.twitter.com/1.1/statuses/update.json 
 function tweet() {
-  var text = shortQuote($("#quote").html());
-  window.open("https://twitter.com/intent/tweet?text="+text+";hashtags=OprahQuotes");
+  let text = shortQuote($("#quote").html());
+  console.log(text);
+  window.open("https://twitter.com/intent/tweet?text=" + text + ";hashtags=OprahQuotes");
   // test in console and log char count
-  console.log(shortQuote($("#quote").html()));
-  console.log(("#OprahQuotes"+shortQuote($("#quote").html())).length);
+//   console.log(shortQuote($("#quote").html()));
+//   console.log(("#OprahQuotes"+shortQuote($("#quote").html())).length);
 };
